@@ -1,1 +1,8 @@
 C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\bin\Debug\Beadando.exe.config
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\bin\Debug\Beadando.exe
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\bin\Debug\Beadando.pdb
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.csprojResolveAssemblyReference.cache
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.Properties.Resources.resources
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.csproj.GenerateResource.Cache
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.exe
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.pdb
