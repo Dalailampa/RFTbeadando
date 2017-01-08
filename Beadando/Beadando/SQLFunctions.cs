@@ -1,19 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;    // ez a 3 kell
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Beadando
 {
-    static class SQLFunctions
+    class SQLFunctions
     {
         static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Adatbazis.mdf;Integrated Security=True");
 
-        static public void Refresh(DataGridView _datagridview)
+
+        public void Refresh(DataGridView _datagridview)
         {
             try
             {
