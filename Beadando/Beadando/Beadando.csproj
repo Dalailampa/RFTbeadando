@@ -64,6 +64,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdatbazisDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AdatbazisDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdatbazisDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="AlapPizza.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -74,6 +79,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLFunctions.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +101,17 @@
     </None>
     <None Include="AdatbazisDataSet.xss">
       <DependentUpon>AdatbazisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdatbazisDataSet1.xsc">
+      <DependentUpon>AdatbazisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AdatbazisDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdatbazisDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdatbazisDataSet1.xss">
+      <DependentUpon>AdatbazisDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
