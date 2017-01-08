@@ -30,6 +30,7 @@ namespace Beadando
             string nev = _tboxNev.Text;
             string cim = _tboxCim.Text;
             database.Modosit(rekordid, nev, cim);
+            
             Close();
         }
 

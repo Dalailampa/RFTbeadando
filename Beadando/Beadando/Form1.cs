@@ -203,67 +203,7 @@ namespace Beadando
 
         }
 
-        #region checkBoxok
-        private void checkBox10_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox4_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox6_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox12_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
+      
 
         private void btnMentes_Click_1(object sender, EventArgs e)
         {
@@ -277,6 +217,7 @@ namespace Beadando
                 Naploz(System.DateTime.Now, " Új rendelés felvétele");
                 osszeg = 0;
                 PizzaInfo = "";
+
             }
         }
 
@@ -290,6 +231,7 @@ namespace Beadando
             int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
             database.Delete(id);
             database.Refresh(this.dataGridViewKiszallitas);
+            Naploz(System.DateTime.Now, " rendelés törlése ");
         }
 
         private void btnModositas_Click(object sender, EventArgs e)
@@ -297,6 +239,11 @@ namespace Beadando
             int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
             Modositas m = new Modositas(id);
             m.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frissit();
         }
     }
 }

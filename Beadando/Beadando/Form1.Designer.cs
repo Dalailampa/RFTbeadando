@@ -41,15 +41,10 @@
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxModositasErreNev = new System.Windows.Forms.TextBox();
-            this.textBoxModositasErrol = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.boxCim = new System.Windows.Forms.TextBox();
@@ -61,6 +56,7 @@
             this.dataGridViewKiszallitas = new System.Windows.Forms.DataGridView();
             this.adatbazisDataSet1 = new Beadando.AdatbazisDataSet1();
             this.adatbazisDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewKiszallitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adatbazisDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adatbazisDataSet1BindingSource)).BeginInit();
@@ -69,7 +65,7 @@
             // checkBox12
             // 
             this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(431, 271);
+            this.checkBox12.Location = new System.Drawing.Point(430, 243);
             this.checkBox12.Name = "checkBox12";
             this.checkBox12.Size = new System.Drawing.Size(109, 17);
             this.checkBox12.TabIndex = 73;
@@ -79,7 +75,7 @@
             // checkBox11
             // 
             this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(431, 245);
+            this.checkBox11.Location = new System.Drawing.Point(430, 217);
             this.checkBox11.Name = "checkBox11";
             this.checkBox11.Size = new System.Drawing.Size(92, 17);
             this.checkBox11.TabIndex = 72;
@@ -89,7 +85,7 @@
             // checkBox10
             // 
             this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(431, 217);
+            this.checkBox10.Location = new System.Drawing.Point(430, 189);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(76, 17);
             this.checkBox10.TabIndex = 71;
@@ -99,7 +95,7 @@
             // checkBox9
             // 
             this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(431, 193);
+            this.checkBox9.Location = new System.Drawing.Point(430, 165);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(84, 17);
             this.checkBox9.TabIndex = 70;
@@ -109,7 +105,7 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(345, 274);
+            this.checkBox8.Location = new System.Drawing.Point(344, 246);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(62, 17);
             this.checkBox8.TabIndex = 69;
@@ -119,7 +115,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(345, 246);
+            this.checkBox7.Location = new System.Drawing.Point(344, 215);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(58, 17);
             this.checkBox7.TabIndex = 68;
@@ -129,7 +125,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(345, 219);
+            this.checkBox6.Location = new System.Drawing.Point(344, 191);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(72, 17);
             this.checkBox6.TabIndex = 67;
@@ -139,7 +135,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(345, 193);
+            this.checkBox5.Location = new System.Drawing.Point(344, 165);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(65, 17);
             this.checkBox5.TabIndex = 66;
@@ -149,7 +145,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(259, 272);
+            this.checkBox4.Location = new System.Drawing.Point(258, 244);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(65, 17);
             this.checkBox4.TabIndex = 65;
@@ -159,7 +155,7 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(259, 246);
+            this.checkBox3.Location = new System.Drawing.Point(258, 218);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(67, 17);
             this.checkBox3.TabIndex = 64;
@@ -169,7 +165,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(259, 219);
+            this.checkBox2.Location = new System.Drawing.Point(258, 191);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(62, 17);
             this.checkBox2.TabIndex = 63;
@@ -179,44 +175,17 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(259, 192);
+            this.checkBox1.Location = new System.Drawing.Point(258, 164);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(65, 17);
             this.checkBox1.TabIndex = 62;
             this.checkBox1.Text = "Gombás";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(362, 373);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 13);
-            this.label9.TabIndex = 61;
-            this.label9.Text = "új név";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(240, 374);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 13);
-            this.label8.TabIndex = 60;
-            this.label8.Text = "régi név";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(289, 351);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Név módosítása:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 298);
+            this.label5.Location = new System.Drawing.Point(3, 246);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 57;
@@ -225,7 +194,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 270);
+            this.label4.Location = new System.Drawing.Point(12, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(17, 13);
             this.label4.TabIndex = 56;
@@ -234,7 +203,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 244);
+            this.label3.Location = new System.Drawing.Point(12, 192);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 13);
             this.label3.TabIndex = 55;
@@ -243,50 +212,36 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 216);
+            this.label2.Location = new System.Drawing.Point(12, 164);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 54;
             this.label2.Text = "Név";
             // 
-            // textBoxModositasErreNev
-            // 
-            this.textBoxModositasErreNev.Location = new System.Drawing.Point(352, 392);
-            this.textBoxModositasErreNev.Name = "textBoxModositasErreNev";
-            this.textBoxModositasErreNev.Size = new System.Drawing.Size(100, 20);
-            this.textBoxModositasErreNev.TabIndex = 52;
-            // 
-            // textBoxModositasErrol
-            // 
-            this.textBoxModositasErrol.Location = new System.Drawing.Point(228, 392);
-            this.textBoxModositasErrol.Name = "textBoxModositasErrol";
-            this.textBoxModositasErrol.Size = new System.Drawing.Size(100, 20);
-            this.textBoxModositasErrol.TabIndex = 51;
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(66, 295);
+            this.textBox5.Location = new System.Drawing.Point(47, 243);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 20);
             this.textBox5.TabIndex = 49;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(64, 270);
+            this.textBox4.Location = new System.Drawing.Point(45, 218);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 48;
             // 
             // boxCim
             // 
-            this.boxCim.Location = new System.Drawing.Point(64, 240);
+            this.boxCim.Location = new System.Drawing.Point(45, 188);
             this.boxCim.Name = "boxCim";
             this.boxCim.Size = new System.Drawing.Size(100, 20);
             this.boxCim.TabIndex = 47;
             // 
             // boxNev
             // 
-            this.boxNev.Location = new System.Drawing.Point(64, 214);
+            this.boxNev.Location = new System.Drawing.Point(45, 162);
             this.boxNev.Name = "boxNev";
             this.boxNev.Size = new System.Drawing.Size(100, 20);
             this.boxNev.TabIndex = 45;
@@ -303,7 +258,7 @@
             // 
             // btnModositas
             // 
-            this.btnModositas.Location = new System.Drawing.Point(302, 422);
+            this.btnModositas.Location = new System.Drawing.Point(11, 41);
             this.btnModositas.Name = "btnModositas";
             this.btnModositas.Size = new System.Drawing.Size(75, 23);
             this.btnModositas.TabIndex = 43;
@@ -313,7 +268,7 @@
             // 
             // btnTorles
             // 
-            this.btnTorles.Location = new System.Drawing.Point(54, 418);
+            this.btnTorles.Location = new System.Drawing.Point(12, 70);
             this.btnTorles.Name = "btnTorles";
             this.btnTorles.Size = new System.Drawing.Size(75, 23);
             this.btnTorles.TabIndex = 42;
@@ -323,7 +278,7 @@
             // 
             // btnMentes
             // 
-            this.btnMentes.Location = new System.Drawing.Point(66, 321);
+            this.btnMentes.Location = new System.Drawing.Point(11, 139);
             this.btnMentes.Name = "btnMentes";
             this.btnMentes.Size = new System.Drawing.Size(75, 23);
             this.btnMentes.TabIndex = 41;
@@ -334,9 +289,9 @@
             // dataGridViewKiszallitas
             // 
             this.dataGridViewKiszallitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewKiszallitas.Location = new System.Drawing.Point(34, 12);
+            this.dataGridViewKiszallitas.Location = new System.Drawing.Point(94, 8);
             this.dataGridViewKiszallitas.Name = "dataGridViewKiszallitas";
-            this.dataGridViewKiszallitas.Size = new System.Drawing.Size(473, 150);
+            this.dataGridViewKiszallitas.Size = new System.Drawing.Size(439, 150);
             this.dataGridViewKiszallitas.TabIndex = 40;
             // 
             // adatbazisDataSet1
@@ -349,11 +304,22 @@
             this.adatbazisDataSet1BindingSource.DataSource = this.adatbazisDataSet1;
             this.adatbazisDataSet1BindingSource.Position = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(11, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "Frissít";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 510);
+            this.ClientSize = new System.Drawing.Size(826, 510);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBox12);
             this.Controls.Add(this.checkBox11);
             this.Controls.Add(this.checkBox10);
@@ -366,15 +332,10 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxModositasErreNev);
-            this.Controls.Add(this.textBoxModositasErrol);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.boxCim);
@@ -408,15 +369,10 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxModositasErreNev;
-        private System.Windows.Forms.TextBox textBoxModositasErrol;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox boxCim;
@@ -428,6 +384,7 @@
         private System.Windows.Forms.DataGridView dataGridViewKiszallitas;
         private System.Windows.Forms.BindingSource adatbazisDataSet1BindingSource;
         private AdatbazisDataSet1 adatbazisDataSet1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
