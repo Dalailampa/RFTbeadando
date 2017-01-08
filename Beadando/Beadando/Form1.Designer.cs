@@ -44,19 +44,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxModositasErreNev = new System.Windows.Forms.TextBox();
             this.textBoxModositasErrol = new System.Windows.Forms.TextBox();
-            this.textBoxTorles = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.boxCim = new System.Windows.Forms.TextBox();
-            this.boxID = new System.Windows.Forms.TextBox();
             this.boxNev = new System.Windows.Forms.TextBox();
             this.btnKilep = new System.Windows.Forms.Button();
             this.btnModositas = new System.Windows.Forms.Button();
@@ -217,15 +213,6 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Név módosítása:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(51, 364);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 13);
-            this.label6.TabIndex = 58;
-            this.label6.Text = "Törlés ID alapján:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -262,15 +249,6 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Név";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 13);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "ID:";
-            // 
             // textBoxModositasErreNev
             // 
             this.textBoxModositasErreNev.Location = new System.Drawing.Point(352, 392);
@@ -284,13 +262,6 @@
             this.textBoxModositasErrol.Name = "textBoxModositasErrol";
             this.textBoxModositasErrol.Size = new System.Drawing.Size(100, 20);
             this.textBoxModositasErrol.TabIndex = 51;
-            // 
-            // textBoxTorles
-            // 
-            this.textBoxTorles.Location = new System.Drawing.Point(54, 392);
-            this.textBoxTorles.Name = "textBoxTorles";
-            this.textBoxTorles.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTorles.TabIndex = 50;
             // 
             // textBox5
             // 
@@ -313,13 +284,6 @@
             this.boxCim.Size = new System.Drawing.Size(100, 20);
             this.boxCim.TabIndex = 47;
             // 
-            // boxID
-            // 
-            this.boxID.Location = new System.Drawing.Point(66, 188);
-            this.boxID.Name = "boxID";
-            this.boxID.Size = new System.Drawing.Size(100, 20);
-            this.boxID.TabIndex = 46;
-            // 
             // boxNev
             // 
             this.boxNev.Location = new System.Drawing.Point(64, 214);
@@ -335,6 +299,7 @@
             this.btnKilep.TabIndex = 44;
             this.btnKilep.Text = "Kilépés";
             this.btnKilep.UseVisualStyleBackColor = true;
+            this.btnKilep.Click += new System.EventHandler(this.btnKilep_Click);
             // 
             // btnModositas
             // 
@@ -344,6 +309,7 @@
             this.btnModositas.TabIndex = 43;
             this.btnModositas.Text = "Módosítás";
             this.btnModositas.UseVisualStyleBackColor = true;
+            this.btnModositas.Click += new System.EventHandler(this.btnModositas_Click);
             // 
             // btnTorles
             // 
@@ -353,6 +319,7 @@
             this.btnTorles.TabIndex = 42;
             this.btnTorles.Text = "Törlés";
             this.btnTorles.UseVisualStyleBackColor = true;
+            this.btnTorles.Click += new System.EventHandler(this.btnTorles_Click);
             // 
             // btnMentes
             // 
@@ -362,6 +329,7 @@
             this.btnMentes.TabIndex = 41;
             this.btnMentes.Text = "Mentés";
             this.btnMentes.UseVisualStyleBackColor = true;
+            this.btnMentes.Click += new System.EventHandler(this.btnMentes_Click_1);
             // 
             // dataGridViewKiszallitas
             // 
@@ -401,19 +369,15 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxModositasErreNev);
             this.Controls.Add(this.textBoxModositasErrol);
-            this.Controls.Add(this.textBoxTorles);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.boxCim);
-            this.Controls.Add(this.boxID);
             this.Controls.Add(this.boxNev);
             this.Controls.Add(this.btnKilep);
             this.Controls.Add(this.btnModositas);
@@ -447,19 +411,15 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxModositasErreNev;
         private System.Windows.Forms.TextBox textBoxModositasErrol;
-        private System.Windows.Forms.TextBox textBoxTorles;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox boxCim;
-        private System.Windows.Forms.TextBox boxID;
         private System.Windows.Forms.TextBox boxNev;
         private System.Windows.Forms.Button btnKilep;
         private System.Windows.Forms.Button btnModositas;

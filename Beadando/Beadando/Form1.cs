@@ -67,6 +67,28 @@ namespace Beadando
 
 
 
+
+        /// <summary>
+        /// Mentés gomb
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        //private void btnMentes_Click(object sender, EventArgs e)
+        //{
+        //    if (boxID.Text != "" && boxNev.Text != "" && boxCim.Text != "")
+        //    {
+        //        int osszeg = Arosszead();
+        //        string PizzaInfo = InfotGyujt();
+        //        //database.Insert("alam", "dsdsds", osszeg, PizzaInfo);
+        //        database.Insert(int.Parse(boxID.Text), boxNev.Text, boxCim.Text, osszeg, PizzaInfo);
+        //        frissit();
+        //        Naploz(System.DateTime.Now, " Új rendelés felvétele");
+        //        osszeg = 0;
+        //        PizzaInfo = "";
+        //    }
+        //}
+
+
         /// <summary>
         /// Összeadja azon pizzák árát melyek a checkBoxban ki vannak pipálva
         /// </summary>
@@ -181,5 +203,100 @@ namespace Beadando
 
         }
 
+        #region checkBoxok
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void btnMentes_Click_1(object sender, EventArgs e)
+        {
+            if (boxNev.Text != "" && boxCim.Text != "")
+            {
+                int osszeg = Arosszead();
+                string PizzaInfo = InfotGyujt();
+                //database.Insert("alam", "dsdsds", osszeg, PizzaInfo);
+                database.Insert(boxNev.Text, boxCim.Text, osszeg, PizzaInfo);
+                frissit();
+                Naploz(System.DateTime.Now, " Új rendelés felvétele");
+                osszeg = 0;
+                PizzaInfo = "";
+            }
+        }
+
+        private void btnKilep_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnTorles_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
+            database.Delete(id);
+            database.Refresh(this.dataGridViewKiszallitas);
+        }
+
+        private void btnModositas_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
+            Modositas m = new Modositas(id);
+            m.ShowDialog();
+        }
     }
 }

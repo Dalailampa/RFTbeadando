@@ -36,21 +36,48 @@ namespace Beadando
             }
         }
 
+        public DataTable SelectId(int id)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                connection.Open();
+                //DataTable dt = new DataTable();
+                SqlCommand command = new SqlCommand();
+                command.Connection = connection;
+                command.CommandType = CommandType.Text;
+                command.CommandText = "SELECT * FROM [Kiszallitas] WHERE Id=@id ";
+                command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int)).Value = id;
+                SqlDataAdapter sda = new SqlDataAdapter(command);
+                sda.Fill(dt);
+                command.ExecuteNonQuery();
+                return dt;
 
-        static public void Insert(int _id, string _nev, string _cim, int _ar, string _pizza)
+            }
+            catch (SqlException exception) { MessageBox.Show(exception.ToString()); }
+            finally
+            {
+                connection.Close();
+            }
+            return dt;
+
+        }
+
+        public void Insert(string _nev, string _cim, int _ar, string _pizza)
         {
             try
             {
                 connection.Open();
-                SqlCommand commandInsert = new SqlCommand("INSERT INTO [Kiszallitas] values(@id,@nev,@cim,@ar,@pizza)", connection);
-                commandInsert.Parameters.Add("@id", _id);
-                commandInsert.Parameters.Add("@nev", _nev);
-                commandInsert.Parameters.Add("@cim", _cim);
-                commandInsert.Parameters.Add("@ar", _ar);
-                commandInsert.Parameters.Add("@pizza", _pizza);
+                SqlCommand commandInsert = new SqlCommand("INSERT INTO [Kiszallitas] values(@nev,@cim,@pizza,@ar)", connection);
+                
+                commandInsert.Parameters.Add(new SqlParameter("@nev", SqlDbType.NVarChar)).Value = _nev;
+                commandInsert.Parameters.Add(new SqlParameter("@cim", SqlDbType.NVarChar)).Value =_cim;
+                commandInsert.Parameters.Add(new SqlParameter("@ar", SqlDbType.Int)).Value = _ar;
+                commandInsert.Parameters.Add(new SqlParameter("@pizza", SqlDbType.NVarChar)).Value = _pizza;
+                
                 commandInsert.ExecuteNonQuery();
 
-            }
+            }           
             catch (SqlException exception)
             {
                 MessageBox.Show(exception.ToString());
@@ -61,14 +88,14 @@ namespace Beadando
             }
         }
 
-
-        static public void Delete(string _id)
+        public void Delete(int _id)
         {
             try
             {
                 connection.Open();
                 SqlCommand commandDelete = new SqlCommand("DELETE FROM [Kiszallitas] where Id = @id", connection);
-                commandDelete.Parameters.Add("@id", _id);
+                // command.Parameters.Add(new SqlParameter("@id", SqlDbType.Int)).Value = _id;
+                commandDelete.Parameters.Add(new SqlParameter("@id", SqlDbType.Int)).Value = _id;
                 commandDelete.ExecuteNonQuery();
             }
             catch (SqlException exception)
@@ -80,6 +107,7 @@ namespace Beadando
                 connection.Close();
             }
         }
+       
 
         static public void Update(string _regiNev, string _UjNev)
         {
@@ -106,6 +134,24 @@ namespace Beadando
             {
                 connection.Close();
             }
+        }
+
+        public void Modosit(int id, string _nev, string _cim)
+        {
+            try
+            {
+                connection.Open();
+                SqlCommand commandInsert = new SqlCommand("UPDATE [Kiszallitas] SET Nev=@nev,Cim=@cim WHERE Id=@id", connection);
+                commandInsert.Parameters.Add(new SqlParameter("@id", SqlDbType.Int)).Value = id;
+                commandInsert.Parameters.Add(new SqlParameter("@nev", SqlDbType.NVarChar)).Value = _nev;
+                commandInsert.Parameters.Add(new SqlParameter("@cim", SqlDbType.NVarChar)).Value = _cim;       
+                commandInsert.ExecuteNonQuery();
+            }
+            catch (SqlException exception)
+            {
+                MessageBox.Show(exception.ToString());
+            }
+            finally { connection.Close(); }
         }
 
     }

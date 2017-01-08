@@ -9,3 +9,4 @@ C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.pdb
 c:\TaroloGithubra\RFTbeadando\Beadando\Beadando\bin\Debug\Adatbazis.mdf
 c:\TaroloGithubra\RFTbeadando\Beadando\Beadando\bin\Debug\Adatbazis_log.ldf
 c:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.Form1.resources
+C:\TaroloGithubra\RFTbeadando\Beadando\Beadando\obj\Debug\Beadando.Modositas.resources
