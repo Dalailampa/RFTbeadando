@@ -1,0 +1,9 @@
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\Adatbazis.mdf
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\Adatbazis_log.ldf
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\Beadando.exe
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\bin\Debug\Beadando.pdb
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\TaroloGithubra\RFTbeadando\Beadando\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

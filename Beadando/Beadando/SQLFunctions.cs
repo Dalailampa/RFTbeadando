@@ -36,6 +36,11 @@ namespace Beadando
             }
         }
 
+        /// <summary>
+        /// Id alapján választja ki a sort
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public DataTable SelectId(int id)
         {
             DataTable dt = new DataTable();
@@ -63,6 +68,13 @@ namespace Beadando
 
         }
 
+        /// <summary>
+        /// Insert parancs az adatbázishoz
+        /// </summary>
+        /// <param name="_nev"></param>
+        /// <param name="_cim"></param>
+        /// <param name="_ar"></param>
+        /// <param name="_pizza"></param>
         public void Insert(string _nev, string _cim, int _ar, string _pizza)
         {
             try
@@ -88,6 +100,10 @@ namespace Beadando
             }
         }
 
+        /// <summary>
+        /// törlés parancs az adatbázishoz Id alapján
+        /// </summary>
+        /// <param name="_id"></param>
         public void Delete(int _id)
         {
             try
@@ -136,6 +152,12 @@ namespace Beadando
             }
         }
 
+        /// <summary>
+        /// Név és cím módosítása
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="_nev"></param>
+        /// <param name="_cim"></param>
         public void Modosit(int id, string _nev, string _cim)
         {
             try

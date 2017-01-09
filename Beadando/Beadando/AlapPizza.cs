@@ -311,7 +311,7 @@ namespace Beadando
     }
     #endregion
 
-
+   // new Sajt(new Gomba(new Szalami(new Csaszarszalonna(new Olajbogyo(new Paradicsom(new Erospaprika(new Hagyma(new Fokhagyma(new AlapPizza32())))))))));
     #region Tejföl
     public class Tejfol : PizzaDecorator
     {

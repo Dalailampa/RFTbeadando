@@ -64,30 +64,63 @@ namespace Beadando
 
 
         #endregion
-
-
-
-
+        
+        
         /// <summary>
-        /// Mentés gomb
+        /// az adatbázisba menti a megadott adatokat
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        //private void btnMentes_Click(object sender, EventArgs e)
-        //{
-        //    if (boxID.Text != "" && boxNev.Text != "" && boxCim.Text != "")
-        //    {
-        //        int osszeg = Arosszead();
-        //        string PizzaInfo = InfotGyujt();
-        //        //database.Insert("alam", "dsdsds", osszeg, PizzaInfo);
-        //        database.Insert(int.Parse(boxID.Text), boxNev.Text, boxCim.Text, osszeg, PizzaInfo);
-        //        frissit();
-        //        Naploz(System.DateTime.Now, " Új rendelés felvétele");
-        //        osszeg = 0;
-        //        PizzaInfo = "";
-        //    }
-        //}
+        private void btnMentes_Click_1(object sender, EventArgs e)
+        {
+            if (boxNev.Text != "" && boxCim.Text != "")
+            {
+                int osszeg = Arosszead();
+                string PizzaInfo = InfotGyujt();
+                //database.Insert("alam", "dsdsds", osszeg, PizzaInfo);
+                database.Insert(boxNev.Text, boxCim.Text, osszeg, PizzaInfo);
+                frissit();
+                Naploz(System.DateTime.Now, " Új rendelés felvétele");
+                osszeg = 0;
+                PizzaInfo = "";
 
+            }
+        }
+
+        private void btnKilep_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnTorles_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
+            database.Delete(id);
+            database.Refresh(this.dataGridViewKiszallitas);
+            Naploz(System.DateTime.Now, " rendelés törlése ");
+        }
+
+        /// <summary>
+        /// új ablakot nyit, ahol lehet majd módosítani az adatokat
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnModositas_Click(object sender, EventArgs e)
+        {
+            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
+            Modositas m = new Modositas(id);
+            m.ShowDialog();
+        }
+
+        /// <summary>
+        /// Frissíti a dataGridView-t
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frissit();
+        }
 
         /// <summary>
         /// Összeadja azon pizzák árát melyek a checkBoxban ki vannak pipálva
@@ -146,8 +179,6 @@ namespace Beadando
             }
             return osszar;
         }
-
-
         public string InfotGyujt()
         {
             string info = "";
@@ -201,49 +232,6 @@ namespace Beadando
             }
             return info;
 
-        }
-
-      
-
-        private void btnMentes_Click_1(object sender, EventArgs e)
-        {
-            if (boxNev.Text != "" && boxCim.Text != "")
-            {
-                int osszeg = Arosszead();
-                string PizzaInfo = InfotGyujt();
-                //database.Insert("alam", "dsdsds", osszeg, PizzaInfo);
-                database.Insert(boxNev.Text, boxCim.Text, osszeg, PizzaInfo);
-                frissit();
-                Naploz(System.DateTime.Now, " Új rendelés felvétele");
-                osszeg = 0;
-                PizzaInfo = "";
-
-            }
-        }
-
-        private void btnKilep_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnTorles_Click(object sender, EventArgs e)
-        {
-            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
-            database.Delete(id);
-            database.Refresh(this.dataGridViewKiszallitas);
-            Naploz(System.DateTime.Now, " rendelés törlése ");
-        }
-
-        private void btnModositas_Click(object sender, EventArgs e)
-        {
-            int id = (int)dataGridViewKiszallitas.CurrentRow.Cells["Id"].Value;
-            Modositas m = new Modositas(id);
-            m.ShowDialog();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frissit();
         }
     }
 }
